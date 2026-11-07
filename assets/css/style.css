@@ -117,7 +117,7 @@ button { font: inherit; }
 .nav-cta:hover { background: var(--accent-dark); }
 .menu-toggle { display: none; border: 1px solid var(--border-color); border-radius: 8px; background: transparent; color: var(--text-primary); padding: 9px 12px; cursor: pointer; }
 
-.hero { position: relative; overflow: hidden; isolation: isolate; background-color: var(--page-bg); background-image: linear-gradient(to bottom, rgba(16, 18, 20, .38) 0%, rgba(16, 18, 20, .28) 52%, var(--page-bg) 100%), linear-gradient(90deg, rgba(16, 18, 20, .76) 0%, rgba(16, 18, 20, .42) 62%, rgba(16, 18, 20, .2) 100%), url("../../images/main-bg.png"); background-position: center, center, center 42%; background-size: cover; background-repeat: no-repeat; color: #fff; padding: clamp(76px, 10vw, 128px) 0 112px; }
+.hero { position: relative; overflow: hidden; isolation: isolate; background-color: var(--page-bg); background-image: linear-gradient(to bottom, rgba(16, 18, 20, .38) 0%, rgba(16, 18, 20, .28) 52%, var(--page-bg) 100%), linear-gradient(90deg, rgba(16, 18, 20, .76) 0%, rgba(16, 18, 20, .42) 62%, rgba(16, 18, 20, .2) 100%), url("../images/main-bg.png"); background-position: center, center, center 42%; background-size: cover; background-repeat: no-repeat; color: #fff; padding: clamp(76px, 10vw, 128px) 0 112px; }
 .hero:after { content: ""; position: absolute; width: 440px; height: 440px; border: 1px solid rgba(245, 130, 32, .2); border-radius: 50%; right: -120px; top: -170px; box-shadow: 0 0 0 50px rgba(245, 130, 32, .035), 0 0 0 100px rgba(245, 130, 32, .025); }
 .hero-inner { position: relative; z-index: 1; max-width: 790px; }
 .eyebrow { color: var(--accent); font-size: .78rem; font-weight: 800; letter-spacing: 2.2px; text-transform: uppercase; }
