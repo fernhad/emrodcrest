@@ -14,9 +14,16 @@
   <title>Products | EMROD CREST Building &amp; Finishing</title>
 
   <!-- Theme initialization -->
-  <script>
+ <script>
     (function () {
-      const savedTheme = localStorage.getItem("emro-theme");
+      let savedTheme = null;
+
+      try {
+        savedTheme = localStorage.getItem("emro-theme");
+      } catch (error) {
+        // Continue using the system preference.
+      }
+
       const systemPrefersDark = window.matchMedia(
         "(prefers-color-scheme: dark)"
       ).matches;
@@ -41,11 +48,11 @@
 <header class="site-header">
   <div class="container nav-wrap">
 
-    <a class="brand" href="./" aria-label="EMRO home">
+    <a class="brand" href="index.html" aria-label="EMRO home">
       <span class="brand-mark">EM</span>
       <span class="brand-copy">
         <strong>EMROD CREST</strong>
-        <small>Building Construction &amp; Finishing | EMROD CREST</small>
+        <small>BUILDING &amp; FINISHING</small>
       </span>
     </a>
 
@@ -61,15 +68,38 @@
 
     <nav class="primary-nav" id="primary-nav" aria-label="Primary navigation">
 
-      <a href="../" data-page="./">Home</a>
-      <a href="pages/services.html" data-page="services.html">Services</a>
+      <a href="index.html" data-page="index.html">Home</a>
+      <a href="pages/services.html" data-page="services.html" aria-current="page">Services</a>
       <a href="pages/products.html" data-page="products.html">Products</a>
       <a href="pages/projects.html" data-page="projects.html">Projects</a>
       <a href="pages/about.html" data-page="about.html">About</a>
       <a href="pages/testimonials.html" data-page="testimonials.html">Testimonials</a>
       <a href="pages/blog/index.html" data-page="blog-index.html">Blog</a>
 
-      <!-- LIGHT / DARK THEME TOGGLE -->
+      <a
+        class="whatsapp-link"
+        href="https://wa.me/263714387085?text=Hello%20EMROD%20CREST%2C%20I%27m%20interested%20in%20your%20services."
+        target="_blank"
+        rel="noopener noreferrer"
+        aria-label="Chat with EMROD CREST on WhatsApp"
+        title="Chat with us on WhatsApp"
+      >
+        <svg
+          viewBox="0 0 32 32"
+          width="22"
+          height="22"
+          fill="currentColor"
+          aria-hidden="true"
+        >
+          <path d="M16.04 2.67A13.27 13.27 0 0 0 4.6 22.65L2.67 29.33l6.84-1.8a13.3 13.3 0 1 0 6.53-24.86Zm0 24.2a10.95 10.95 0 0 1-5.58-1.53l-.4-.24-4.06 1.07 1.09-3.96-.26-.41a10.96 10.96 0 1 1 9.21 5.07Zm6.02-8.2c-.33-.17-1.96-.97-2.26-1.08-.3-.11-.52-.17-.74.17-.22.33-.85 1.08-1.04 1.3-.19.22-.38.25-.71.08-.33-.17-1.4-.52-2.67-1.65-.99-.88-1.66-1.97-1.85-2.3-.19-.33-.02-.51.14-.67.15-.15.33-.38.49-.57.16-.19.22-.33.33-.55.11-.22.06-.41-.03-.57-.08-.16-.74-1.79-1.01-2.45-.27-.64-.54-.55-.74-.56l-.63-.01c-.22 0-.57.08-.87.41-.3.33-1.14 1.11-1.14 2.7s1.17 3.13 1.33 3.35c.16.22 2.3 3.51 5.57 4.92.78.34 1.39.54 1.87.69.79.25 1.51.21 2.08.13.63-.09 1.96-.8 2.24-1.57.27-.77.27-1.43.19-1.57-.08-.14-.3-.22-.63-.39Z"/>
+        </svg>
+        <span>WhatsApp</span>
+      </a>
+
+      <a class="nav-cta" href="pages/contact.html">
+        Request a quote
+      </a>
+
       <button
   class="theme-toggle"
   type="button"
@@ -81,26 +111,6 @@
   <span class="theme-toggle-icon" data-theme-icon aria-hidden="true">☀</span>
   <span class="theme-toggle-label" data-theme-label>Light mode</span>
 </button>
-
-      <!-- WHATSAPP DIRECT MESSAGE -->
-      <a
-        class="whatsapp-link"
-        href="https://wa.me/263714387085?text=Hello%20EMROD%20CREST%2C%20I%27m%20interested%20in%20your%20products%20and%20services."
-        target="_blank"
-        rel="noopener noreferrer"
-        aria-label="Chat with EMROD CREST on WhatsApp"
-        title="Chat with us on WhatsApp"
-      >
-        <svg viewBox="0 0 32 32" width="22" height="22"
-             fill="currentColor" aria-hidden="true">
-          <path d="M16.04 2.67A13.27 13.27 0 0 0 4.6 22.65L2.67 29.33l6.84-1.8a13.3 13.3 0 1 0 6.53-24.86Zm0 24.2a10.95 10.95 0 0 1-5.58-1.53l-.4-.24-4.06 1.07 1.09-3.96-.26-.41a10.96 10.96 0 1 1 9.21 5.07Zm6.02-8.2c-.33-.17-1.96-.97-2.26-1.08-.3-.11-.52-.17-.74.17-.22.33-.85 1.08-1.04 1.3-.19.22-.38.25-.71.08-.33-.17-1.4-.52-2.67-1.65-.99-.88-1.66-1.97-1.85-2.3-.19-.33-.02-.51.14-.67.15-.15.33-.38.49-.57.16-.19.22-.33.33-.55.11-.22.06-.41-.03-.57-.08-.16-.74-1.79-1.01-2.45-.27-.64-.54-.55-.74-.56l-.63-.01c-.22 0-.57.08-.87.41-.3.33-1.14 1.11-1.14 2.7s1.17 3.13 1.33 3.35c.16.22 2.3 3.51 5.57 4.92.78.34 1.39.54 1.87.69.79.25 1.51.21 2.08.13.63-.09 1.96-.8 2.24-1.57.27-.77.27-1.43.19-1.57-.08-.14-.3-.22-.63-.39Z"/>
-        </svg>
-        <span>WhatsApp</span>
-      </a>
-
-      <a class="nav-cta" href="pages/contact.html">
-        Request a quote
-      </a>
 
     </nav>
   </div>
