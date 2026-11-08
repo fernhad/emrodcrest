@@ -159,6 +159,8 @@ h1, h2, h3, h4 { line-height: 1.2; }
 .text-link { display: inline-flex; gap: 7px; align-items: center; margin-top: 17px; color: var(--accent-dark); font-weight: 750; text-decoration: none; }
 .text-link-italic { fon-family: Georgia, "Times New Roman", serif; font-style: italic; font-weight: 400; }
 .text-link:hover { text-decoration: underline; }
+/* Force the bold product title to always start on its own line */
+td .text-link { display: block; margin-top: 4px; /* Adds a tiny, neat gap between the two text pieces */}
 .split { display: grid; grid-template-columns: 1fr 1fr; gap: 56px; align-items: center; }
 .split p { color: var(--text-muted); }
 .check-list { list-style: none; padding: 0; margin: 22px 0 0; }
