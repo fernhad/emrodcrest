@@ -246,6 +246,41 @@ td .text-link { display: block; margin-top: 4px; /* Adds a tiny, neat gap betwee
 .footer-bottom { border-top: 1px solid var(--border-color); padding-top: 18px; display: flex; justify-content: space-between; gap: 15px; flex-wrap: wrap; font-size: .82rem; }
 .footer-bottom p { margin: 0; }
 
+/* =========================================================
+   Blog Post Meta & Disclaimer Notice Banner
+   ========================================================= */
+
+.blog-meta {
+  font-size: 0.875rem;
+  color: var(--text-muted);
+  margin: 0 0 1rem;
+  letter-spacing: 0.2px;
+}
+
+.notice {
+  background: var(--surface-secondary);
+  border: 1px solid var(--border-color);
+  border-left: 4px solid var(--brand-orange);
+  color: var(--text-secondary);
+  padding: 16px 20px;
+  margin: 0 0 28px;
+  border-radius: 8px;
+  font-size: 0.95rem;
+  line-height: 1.6;
+}
+
+/* Optional: Style links inside the article body with brand orange */
+.content-narrow a:not(.text-link) {
+  color: var(--brand-orange);
+  text-decoration: underline;
+  text-underline-offset: 3px;
+}
+
+.content-narrow a:not(.text-link):hover {
+  color: var(--brand-orange-dark);
+}
+
+
 @media (max-width: 900px) {
   .menu-toggle { display: inline-flex; align-items: center; gap: 8px; }
   .primary-nav { display: none; position: absolute; top: 76px; left: 0; right: 0; background: var(--surface-primary); color: var(--text-primary); padding: 16px 20px 22px; align-items: stretch; flex-direction: column; gap: 0; border-top: 1px solid var(--border-color); box-shadow: var(--card-shadow); }
